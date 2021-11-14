@@ -42,8 +42,8 @@ for i in range (len(intensity)):
         if i == wh:
             intensity[i][j] = 1    
         else: # НЕ ЗНАЮ КАК СДЕЛАТЬ
-            if white[j] < 0.1:
-                white[j] += 0.1
+            if white[j] < 0.5:
+                white[j] += 0.5
             intensity[i][j] /= white[j]
         
 
