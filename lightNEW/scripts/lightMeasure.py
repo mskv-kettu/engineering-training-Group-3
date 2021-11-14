@@ -5,11 +5,8 @@ import numpy as np
 from PIL import Image
 
 with picamera.PiCamera() as camera:
-    camera.resolution = (100,100)
-    time.sleep(2)
-    image = np.empty((128,112, 3), dtype=np.uint8)
-    camera.capture(image, 'rgb')
-    image = image[:100, :100]
-
-im = Image.fromarray(np)
-im.save("data/" + time() + ".png")
+camera.resolution = (2560, 1440)
+camera.start_preview()
+time.sleep(1)
+camera.capture("photoname.png")
+im.save("photoname.png")
