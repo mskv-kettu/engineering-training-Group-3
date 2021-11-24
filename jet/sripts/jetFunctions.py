@@ -1,6 +1,6 @@
-#import spidev
+import spidev
 import time
-#import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 import numpy as np
 import matplotlib.pyplot as plt
 
